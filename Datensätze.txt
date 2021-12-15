@@ -1,0 +1,64 @@
+Equities
+ES: https://www.cmegroup.com/markets/equities/sp/e-mini-sandp500.volume.html !!!!!
+NQ: https://www.cmegroup.com/markets/equities/nasdaq/e-mini-nasdaq-100.volume.html !!!
+YM: https://www.cmegroup.com/markets/equities/dow-jones/e-mini-dow.volume.html !!!!
+RTY: https://www.cmegroup.com/markets/equities/russell/e-mini-russell-2000.volume.html !!!
+--
+-- 
+Financials
+ZB: https://www.cmegroup.com/markets/interest-rates/us-treasury/30-year-us-treasury-bond.volume.html !!
+ZN: https://www.cmegroup.com/markets/interest-rates/us-treasury/10-year-us-treasury-note.volume.html !!
+--
+--
+Currencies
+6E: https://www.cmegroup.com/markets/fx/g10/euro-fx.html !!
+6S: https://www.cmegroup.com/markets/fx/g10/swiss-franc.volume.html !!
+6B: https://www.cmegroup.com/markets/fx/g10/british-pound.volume.html !!
+6A: https://www.cmegroup.com/markets/fx/g10/australian-dollar.volume.html !!
+6N: https://www.cmegroup.com/markets/fx/g10/new-zealand-dollar.volume.html !!
+6C: https://www.cmegroup.com/markets/fx/g10/canadian-dollar.volume.html !!
+6J: https://www.cmegroup.com/markets/fx/g10/japanese-yen.volume.html !!
+6M: https://www.cmegroup.com/markets/fx/emerging-market/mexican-peso.volume.html !!
+
+//THE ICE:
+DX: https://www.theice.com/products/194/US-Dollar-Index-Futures/data?marketId=6544937 - End Of Day Report: https://www.theice.com/marketdata/reports/12/product/578/hub/727/isOption/false/isSpread/false
+--
+-- 
+Metals
+GC: https://www.cmegroup.com/markets/metals/precious/gold.volume.html
+SI: https://www.cmegroup.com/markets/metals/precious/silver.volume.html
+PL: https://www.cmegroup.com/markets/metals/precious/platinum.volume.html
+PA: https://www.cmegroup.com/markets/metals/precious/palladium.volume.html
+HG: https://www.cmegroup.com/markets/metals/base/copper.volume.html
+--
+--
+Energies
+CL: https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.volume.html
+RB: https://www.cmegroup.com/markets/energy/refined-products/rbob-gasoline.volume.html
+HO: https://www.cmegroup.com/markets/energy/refined-products/heating-oil.volume.html
+NG: https://www.cmegroup.com/markets/energy/natural-gas/natural-gas.volume.html
+--
+--
+Grains
+ZC: https://www.cmegroup.com/markets/agriculture/grains/corn.volume.html
+ZW: https://www.cmegroup.com/markets/agriculture/grains/wheat.volume.html
+ZO: https://www.cmegroup.com/markets/agriculture/grains/oats.volume.html
+ZR: https://www.cmegroup.com/markets/agriculture/grains/rough-rice.volume.html
+ZS: https://www.cmegroup.com/markets/agriculture/oilseeds/soybean.volume.html
+ZL: https://www.cmegroup.com/markets/agriculture/oilseeds/soybean-oil.volume.html
+ZM: https://www.cmegroup.com/markets/agriculture/oilseeds/soybean-meal.volume.html
+--
+--
+Softs
+CT: https://www.theice.com/products/254/Cotton-No-2-Futures/data?marketId=5932332 - End Of Day Report: https://www.theice.com/marketdata/reports/12/product/578/hub/727/isOption/false/isSpread/false
+CC: https://www.theice.com/products/7/Cocoa-Futures/data?marketId=6348098 - End Of Day Report: https://www.theice.com/marketdata/reports/12/product/578/hub/727/isOption/false/isSpread/false
+SB: https://www.theice.com/products/23/Sugar-No-11-Futures/data?marketId=6011108 - End Of Day Report: https://www.theice.com/marketdata/reports/12/product/578/hub/727/isOption/false/isSpread/false
+KC: https://www.theice.com/products/15/Coffee-C-Futures/data?marketId=5932331 - End Of Day Report: https://www.theice.com/marketdata/reports/12/product/578/hub/727/isOption/false/isSpread/false
+OJ: https://www.theice.com/products/30/FCOJ-A-Futures/data?marketId=5966203 - End Of Day Report: https://www.theice.com/marketdata/reports/12/product/578/hub/727/isOption/false/isSpread/false
+LBS: https://www.cmegroup.com/markets/agriculture/lumber-and-softs/random-length-lumber.volume.html
+--
+-- 
+Meats
+LE: https://www.cmegroup.com/markets/agriculture/livestock/live-cattle.volume.html
+GF: https://www.cmegroup.com/markets/agriculture/livestock/feeder-cattle.volume.html
+HE: https://www.cmegroup.com/markets/agriculture/livestock/lean-hogs.volume.html

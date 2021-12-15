@@ -1,0 +1,75 @@
+
+ {
+    "infoData": [
+        {
+            "id:": "1",
+            "url-id":  "133",
+            "name": "S&P 500 Futures"
+        },
+        {
+            "id:": "2",
+            "url-id":  "146",
+            "name": "E Mini Nasdq 100"
+        },
+        {
+            "id:": "3",
+            "url-id":  "318",
+            "name": "E mini Dow"
+        },
+        {
+            "id:": "4",
+            "url-id":  "8314",
+            "name": "E mini Russel 2000"
+        },
+        {
+            "id:": "5",
+            "url-id":  "307",
+            "name": "30-Year U.S Treasury Bond Futures"
+        },
+        {
+            "id:": "6",
+            "url-id":  "316",
+            "name": "10-Year T-Note Futures"
+        },
+        {
+            "id:": "7",
+            "url-id":  "58",
+            "name": "Euro FX"
+        },
+        {
+            "id:": "8",
+            "url-id":  "86",
+            "name": "Swiss Franc"
+        },
+        {
+            "id:": "9",
+            "url-id":  "42",
+            "name": "British-Pound"
+        },
+        {
+            "id:": "10",
+            "url-id":  "37",
+            "name": "Australian Dollar"
+        },
+        {
+            "id:": "11",
+            "url-id":  "78",
+            "name": "New Zeland Dollar"
+        },
+        {
+            "id:": "12",
+            "url-id":  "48",
+            "name": "Canadian Dollar"
+        },
+        {
+            "id:": "13",
+            "url-id":  "69",
+            "name": "Japanese Jen"
+        },
+        {
+            "id:": "14",
+            "url-id":  "75",
+            "name": "Mexican Peso"
+        }
+    ]
+ }
