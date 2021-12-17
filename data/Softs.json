@@ -1,0 +1,45 @@
+{
+    "infoData": [
+        {
+            "from": "cme",
+            "id": "32",
+            "url-id": "2498",
+            "name": "Random Length Lumber"
+        },
+        {
+            "from": "theice",
+            "id": "33",
+            "url-id": "588",
+            "hub-id": "732",
+            "name": "Cotton No-2 Futures"
+        },
+        {
+            "from": "theice",
+            "id": "34",
+            "url-id": "578",
+            "hub-id": "727",
+            "name": "Cocoa Futures"
+        },
+        {
+            "from": "theice",
+            "id": "35",
+            "url-id": "582",
+            "hub-id": "729",
+            "name": "Sugar No. 11 Futures"
+        },
+        {
+            "from": "theice",
+            "id": "36",
+            "url-id": "580",
+            "hub-id": "728",
+            "name": "Coffee C Futures"
+        },
+        {
+            "from": "theice",
+            "id": "37",
+            "url-id": "586",
+            "hub-id": "731",
+            "name": "FCOJ-A Futures"
+        }
+    ]
+}

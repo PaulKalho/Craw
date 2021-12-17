@@ -2,25 +2,32 @@ import requests
 import json
 import openpyxl
 import string
+import datetime
 
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import PatternFill
+from openpyxl.utils import get_column_letter
+from datetime import datetime, timedelta
 
 wb = load_workbook('Daten.xlsx') 
 ws = wb.active
 
-ws.delete_rows(1, ws.max_row+1) ## ACHTUNG: LÖSCHT ALLE DATEN DIE BEREITS IN TABELLE STEHEN!
+dataName_array = ["Currencies", "Energies" , "Equities" , "Financials" , "Grains" , "Meats" , "Metals" , "Softs"]
 
-with open("info.json") as f:
-    info_data = json.load(f)
-
-with open("infotest.json") as b: 
-    infotest_data = json.load(b)
+# ws.delete_rows(1, ws.max_row+1) ## ACHTUNG: LÖSCHT ALLE DATEN DIE BEREITS IN TABELLE STEHEN!
 
 b = 0
 
+progress = 0
+
+isCme = False
+
+tradeDate = (datetime.now() - timedelta(1)).strftime('%Y%m%d')
+
+print(tradeDate)
+
 params = {
-    "tradeDate": "20211210", #wie verändert sich das trade datum?
+    "tradeDate": "20211216", #wie verändert sich das trade datum?
     "pageSize": "50",
     "_": "1620683546888"
 }
@@ -31,49 +38,103 @@ headers = {
     "User-Agent": "Mozilla/5.0"
 }
 
-cord_a = 2;
-cord_b = 4;
-cord_c = 5;
-
-print ()
+cord_col_a = 1
+cord_col_b = 2 
 
 
-for b in range (0,len(infotest_data["equeties"])):
-    url_id = (info_data["infoData"][b]["url-id"])
+for b in range (0, 8):
 
-    url = "https://www.cmegroup.com/CmeWS/mvc/Volume/Details/F/"+ url_id +"/20211210/P"
+    if b >= 1: 
+        cord_col_a = cord_col_a + 3
+        cord_col_b = cord_col_b + 3
 
-    response = requests.get(url, params=params, headers=headers) #URL
-    response.raise_for_status()
+    with open("data/" + dataName_array[b] + ".json") as f:
+        info_data = json.load(f)
 
-    data = response.json() #Data von Url Json
+    ws[get_column_letter(cord_col_a) + "2" ] = dataName_array[b]
 
-    ws["A" + str(cord_a)].fill = PatternFill(start_color="fd3535", end_color="cc0f0f", fill_type = "solid")
-    ws["A" + str(cord_a)] = info_data["infoData"][b]["name"]
+    cord_a = 4
+    cord_b = 5
 
-    i = 0 #für schleife monate reset
+    print("data/" + dataName_array[b] + ".json")
 
-    while i < 3: #Monate Schleife
+    #Momentan preloaded: Man könnte auch je eintrag in for l schleife prozentzahl addieren!
 
-        ws["A" + str(cord_b)] = "Monat:"
-        ws["B" + str(cord_b)] = data["monthData"][i]["month"]
+    #progress = progress + 12,5
 
-        ws["A" + str(cord_c)] = "Total:"
-        ws["B" + str(cord_c)] = data["monthData"][i]["totalVolume"]
+    print("Progress: " + str(progress) + "%")
 
-        cord_b = cord_b + 3 #Abstände zwischen den monaten
-        cord_c = cord_c + 3 #Abstände zwischen Total
+    for l in range(0 , len(info_data["infoData"])):
 
-        i = i + 1 
+        if(info_data["infoData"][l]["from"] == "theice"): #Ist TheIce url?
+            
+            isCme = False
 
-    ##Abstand zwischen neuen Datensätzen
+            params_ice = {
+                "getContractsAsJson": "",
+                "productId": info_data["infoData"][l]["url-id"], 
+                "hubId": info_data["infoData"][l]["hub-id"], 
+            }   
 
-    cord_b = cord_b + 2
-    cord_a = cord_c - 1 ##cord a beim 2 durchlauf soll 2 höher sein wie cord c abstand zu nächstem eintrag
-    cord_c = cord_c + 2
+            url_ice = "https://www.theice.com/marketdata/DelayedMarkets.shtml?"
+
+            try: #TheIce
+                response_Ice = requests.get(url_ice, params=params_ice, headers=headers)
+            except requests.exceptions.RequestException as e1:
+                raise SystemExit(e1)
+
+            response_Ice.raise_for_status()
+            data_ice = response_Ice.json() #Data von Url Json
+            print(response_Ice.url)
+
+        if(info_data["infoData"][l]["from"] == "cme"): #Ist cme url?
+
+            url_id = (info_data["infoData"][l]["url-id"])
+
+            url = "https://www.cmegroup.com/CmeWS/mvc/Volume/Details/F/"+ url_id +"/"+ tradeDate + "/F"
+
+            try: #CME-Group
+                response = requests.get(url, params=params, headers=headers) #URL
+            except requests.exceptions.RequestException as e:
+                raise SystemExit(e)
+
+            response.raise_for_status()
+
+            data_Cme = response.json() #Data von Url Json
+
+            isCme = True
+         
+
+        ws[get_column_letter(cord_col_a) + str(cord_a)] = info_data["infoData"][l]["name"]
+        ws[get_column_letter(cord_col_a) + str(cord_b)] = "Monat:"
+        ws[get_column_letter(cord_col_b) + str(cord_b)] = "Total Volume:"
+
+        i = 0 #für schleife monate reset
+
+        cord_b = cord_b + 1
+
+        while i < 3: #Monate Schleife
+
+            if(isCme == True):
+                ws[get_column_letter(cord_col_a) + str(cord_b)] = data_Cme["monthData"][i]["month"]
+
+                ws[get_column_letter(cord_col_b) + str(cord_b)] = data_Cme["monthData"][i]["totalVolume"]
+
+            if(isCme == False):
+                ws[get_column_letter(cord_col_a) + str(cord_b)] = data_ice[i]["marketStrip"]
+
+                ws[get_column_letter(cord_col_b) + str(cord_b)] = data_ice[i]["volume"]
+
+            i = i + 1 #Increment
+
+            cord_b = cord_b + 1
+
+        #Abstand zwischen neuen Datensätzen:
+
+        cord_b = cord_b + 2
+        cord_a = cord_a + 6
     
-
-    i = 0 #reset für nächsten durchlauf
+        i = 0 #reset für nächsten durchlauf
 
     wb.save("Daten.xlsx")
     
