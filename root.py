@@ -3,6 +3,7 @@ import json
 import openpyxl
 import string
 import datetime
+import os
 
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import PatternFill
@@ -149,7 +150,7 @@ for b in range (0, 8):
 
             url_id = (info_data["infoData"][l]["url-id"])
 
-            url = "https://www.cmegroup.com/CmeWS/mvc/Volume/Details/F/"+ url_id +"/"+ tradeDate + "/P"
+            url = "https://www.cmegroup.com/CmeWS/mvc/Volume/Details/F/"+ url_id +"/"+ "20211217" + "/P"
 
             try: #CME-Group
                 response = requests.get(url, params=params, headers=headers) #URL
@@ -205,4 +206,5 @@ print(""" \n
 ██║░░░░░██║██║░╚███║██║██████╔╝██║░░██║██╗
 ╚═╝░░░░░╚═╝╚═╝░░╚══╝╚═╝╚═════╝░╚═╝░░╚═╝╚═╝
 """)
-    
+
+os.system('pause')
