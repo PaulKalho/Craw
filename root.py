@@ -11,6 +11,7 @@ from openpyxl.utils import get_column_letter
 from datetime import datetime, timedelta
 
 wb = load_workbook('Daten.xlsx') 
+
 ws = wb.active
 
 dataName_array = ["Currencies", "Energies" , "Equities" , "Financials" , "Grains" , "Meats" , "Metals" , "Softs"]
@@ -114,7 +115,7 @@ for b in range (0, 8):
 
     progress = progress + 12.5
 
-    printProgressBar(progress);
+    printProgressBar(progress)
 
     print("Progress: " + str(progress) + "%\n")
 
@@ -138,6 +139,7 @@ for b in range (0, 8):
                 raise SystemExit(e1)
 
             response_Ice.raise_for_status()
+            print(response_Ice.url)
             data_ice = response_Ice.json() #Data von Url Json
 
         if(info_data["infoData"][l]["from"] == "cme"): #Ist cme url?
@@ -177,11 +179,20 @@ for b in range (0, 8):
         while i < 3: #Monate Schleife
 
             if(isCme == True):
+                if i == len(data_Cme):
+                    break
+
                 ws[get_column_letter(cord_col_a) + str(cord_b)] = data_Cme["monthData"][i]["month"]
 
                 ws[get_column_letter(cord_col_b) + str(cord_b)] = data_Cme["monthData"][i]["totalVolume"]
 
             if(isCme == False):
+                #Lengt von der data bekommen, dann nicht weiter zählen! Sonst out of range! Auch bei Cme True
+
+                if i == len(data_ice): #Bug fix "Out of Range z.190"
+                    break
+
+                print (len(data_ice))
                 ws[get_column_letter(cord_col_a) + str(cord_b)] = data_ice[i]["marketStrip"]
 
                 ws[get_column_letter(cord_col_b) + str(cord_b)] = data_ice[i]["volume"]
