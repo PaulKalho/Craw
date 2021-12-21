@@ -1,3 +1,4 @@
+from time import time
 import requests
 import json
 import openpyxl
@@ -8,7 +9,7 @@ import os
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import PatternFill
 from openpyxl.utils import get_column_letter
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 
 wb = load_workbook('Daten.xlsx') 
 
@@ -22,7 +23,21 @@ progress = 0.0
 
 isCme = False
 
-tradeDate = (datetime.now() - timedelta(1)).strftime('%Y%m%d')
+datum = (datetime.now() - timedelta(1))
+datum_weekday = datum.weekday()
+datumTester = ()
+
+if(datum_weekday < 5): 
+    tradeDate = datum.strftime('%Y%m%d')
+elif(datum_weekday == 5):
+    tradeDate = (datum - timedelta(1)).strftime('%Y%m%d')
+elif(datum_weekday == 6):
+    tradeDate = (datum - timedelta(2)).strftime('%Y%m%d')
+
+
+#tradeDate = (datetime.now() - timedelta(1)).strftime('%Y%m%d')
+
+#print (tradeDate)
 
 #print(tradeDate)
 
@@ -141,19 +156,20 @@ for b in range (0, 8):
                 raise SystemExit(e1)
 
             response_Ice.raise_for_status()
+
             data_ice = response_Ice.json() #Data von Url Json
 
         if(info_data["infoData"][l]["from"] == "cme"): #Ist cme url?
 
             params = {
-                "tradeDate": "20211217", #wie verändert sich das trade datum?
+                "tradeDate": tradeDate, #wie verändert sich das trade datum?
                 "pageSize": "50",
                 "_": "1620683546888"
             }
 
             url_id = (info_data["infoData"][l]["url-id"])
 
-            url = "https://www.cmegroup.com/CmeWS/mvc/Volume/Details/F/"+ url_id +"/"+ "20211217" + "/P"
+            url = "https://www.cmegroup.com/CmeWS/mvc/Volume/Details/F/"+ url_id +"/"+ tradeDate + "/P"
 
             try: #CME-Group
                 response = requests.get(url, params=params, headers=headers) #URL
