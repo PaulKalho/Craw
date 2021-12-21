@@ -47,7 +47,7 @@ def printProgressBar(progress):
     
     print("]")
 
-    progress = progress + 12.5
+    #progress = progress + 12.5
     
 
 
@@ -113,13 +113,15 @@ for b in range (0, 8):
 
     #Momentan preloaded: Man könnte auch je eintrag in for l schleife prozentzahl addieren!
 
-    progress = progress + 12.5
+    #progress = progress + 12.5
 
     printProgressBar(progress)
 
     print("Progress: " + str(progress) + "%\n")
 
     for l in range(0 , len(info_data["infoData"])):
+        progress = round(progress + (12.5/len(info_data["infoData"])), 2)
+
 
         if(info_data["infoData"][l]["from"] == "theice"): #Ist TheIce url?
             
