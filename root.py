@@ -7,7 +7,6 @@ import datetime
 import os
 
 from openpyxl import Workbook, load_workbook
-from openpyxl.styles import PatternFill
 from openpyxl.utils import get_column_letter
 from datetime import date, datetime, timedelta
 
@@ -25,7 +24,6 @@ isCme = False
 
 datum = (datetime.now() - timedelta(1))
 datum_weekday = datum.weekday()
-datumTester = ()
 
 if(datum_weekday < 5): 
     tradeDate = datum.strftime('%Y%m%d')
@@ -34,12 +32,9 @@ elif(datum_weekday == 5):
 elif(datum_weekday == 6):
     tradeDate = (datum - timedelta(2)).strftime('%Y%m%d')
 
+#Get trade Date from Website
 
-#tradeDate = (datetime.now() - timedelta(1)).strftime('%Y%m%d')
 
-#print (tradeDate)
-
-#print(tradeDate)
 
 headers = {
     "Accept": "application/json",
@@ -61,8 +56,6 @@ def printProgressBar(progress):
 
     
     print("]")
-
-    #progress = progress + 12.5
     
 
 
@@ -128,8 +121,6 @@ for b in range (0, 8):
 
     #Momentan preloaded: Man könnte auch je eintrag in for l schleife prozentzahl addieren!
 
-    #progress = progress + 12.5
-
     printProgressBar(progress)
 
     print("Progress: " + str(progress) + "%\n")
@@ -170,7 +161,7 @@ for b in range (0, 8):
             url_id = (info_data["infoData"][l]["url-id"])
 
             url = "https://www.cmegroup.com/CmeWS/mvc/Volume/Details/F/"+ url_id +"/"+ tradeDate + "/P"
-
+            print(url)
             try: #CME-Group
                 response = requests.get(url, params=params, headers=headers) #URL
             except requests.exceptions.RequestException as e:
@@ -196,9 +187,11 @@ for b in range (0, 8):
         while i < 3: #Monate Schleife
 
             if(isCme == True):
-                if i == len(data_Cme):
+                if i == len(data_Cme["monthData"]):
+                    cord_b = cord_b + 1
                     break
 
+                print(len(data_Cme["monthData"]))
                 ws[get_column_letter(cord_col_a) + str(cord_b)] = data_Cme["monthData"][i]["month"]
 
                 ws[get_column_letter(cord_col_b) + str(cord_b)] = data_Cme["monthData"][i]["totalVolume"]
@@ -206,6 +199,7 @@ for b in range (0, 8):
             if(isCme == False):
 
                 if i == len(data_ice): #Bug fix "Out of Range z.190"
+                    cord_b = cord_b + 1
                     break
 
                 ws[get_column_letter(cord_col_a) + str(cord_b)] = data_ice[i]["marketStrip"]
@@ -215,6 +209,7 @@ for b in range (0, 8):
             i = i + 1 #Increment
 
             cord_b = cord_b + 1
+
 
         #Abstand zwischen neuen Datensätzen:
 
