@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pycrawapi",
+  "private_key_id": "22be841588e1f20e7b0b145ba734d8b820ec29db",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCn1KDubbhBBf8p\nBFcUNZu6a41vZ+SuPdwIe8EvYpFkUe1hj9owscrQawx5/7MD82mVDdeUH7DJlJW4\n4VEAwcCbBQ7SVEDzHZXNNp8EkzCRXxXpBm8ktQUxHhW1vm33ZsB35r6sk57dptIN\nuZHzL7Yshf3jmcBbOGAQeWvcNzCzm6oXqvjOOX/1Had4yJPEfm3I99IdQXyk8Nfz\npRGIKqtxWffwT1lNQNhrn+2U/RzjnkzPpWIjWa7I4I/nMSkWBRhuJEz6goN64GoQ\n031lE5ftz++PYBxY9gyPvjOmI7ugbmMpoRL3gwNnKyg25UbWphiV0We8xso60eBq\nXRkVo+kfAgMBAAECggEANveoh76uyLkmk3AE9y0BpqJgLds4pirDfJHPuW3Oka1V\nko0TWLx6YR2WdgSdxI7+ByAD+dMRS0xbZzSAm79ZjkwvSQroRNftPsuDdHOixhH+\n8pW1ZC/Xlfk1AhPvH0brhbmwvIQS1aS0CmO7XgtD3rw55cfvHNFPgUXLYlI/JKuw\n1wDy5ccku6dIGAFU4rdBydazn8MMmz05LpaORd4Gi5ep9a8mVmuoD+ripP2Gqfsw\n1H6uQ56ZBw2uVINMfzbUF3otns7lgWl5CdohgZJXyyCkRvf1QYzNT+jJjt6g6CQn\ndbH032Df4Sfkhb0XFgtKAxqvytiuGc0spF1aEK2QdQKBgQDRJiN/300WpnHKFu5i\nOynq5oxp1JWoV2KK9V1Rk6n6HH9oM9BQC0cbY6EAW22OyZ3TvfBZNnYsTMIEC2uU\nUuvNSVpPjItE2ggyU4I4Krw2Hrh1/M5EMbZ5vWs8BvuKrZpCn8EPRHMPy80X7kqE\nJpPKZ9cydyEGNevSNBAusxr5AwKBgQDNbQtXPmPwuBvgihT1Hw/RztwlB6INDvwQ\nFgX/78a0CxpKf3LB5MZPkT+gy1UbShYAuIyZsZK0a4VX+yrO//f5BNutEVxorA5R\nVI00IOvje2WmPhikkgPjXaZ3XcvvY/C/+eEg+C+0CZKUoFd794ytpdykow66G7kX\nt5p/1/aetQKBgBFwxbsPCuWdoZWBjgVg+6Db8s+Ma6JrDwuZZFu+HYl+wN0WnQNf\nvWE6UJ2wAhXLGD8k8prt4LLW/8LIlQL8Wy92M3K4vJBUQiS4M/6tCZ7VtvoXx7eG\nEbpbIksSJf2tdlSh775vLc0eaI7bTxlwAhj5yccqifVzn6OatdK/GruzAoGAQzde\n8pkTknxrgrkryljzkC8jkWpB+AvjJlBOfkQyvE61t5KkNhVpXjeknjRqEJfZQzsf\nplqYKjjUVMl2ZG0U8oJIbwSzO/ywYqRL37a1+KUzyYWgAplUdFz8Typ9xELrT6Wv\nqF4NHdfUApXEimehvF/9JlHES9kuYzhMcXB03dECgYBsHQpP5wEuxPnFVkaJR3Lb\nwDzE3l/7QdKeUunMPjRvZVS0NynqXm1NrlZUCQ90kMxy+EuQfRB5lQiORJe8aSvT\nptLPxRrAwHLnTYrM0vtOH5v5iQLsMjYInSEeSmQCGAm7CIhHU4n922enqbXkhcSI\nHB5gpEvLNwhNi5Ol5OHj+w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "pycrawapi@pycrawapi.iam.gserviceaccount.com",
+  "client_id": "116514789804838045834",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pycrawapi%40pycrawapi.iam.gserviceaccount.com"
+}
