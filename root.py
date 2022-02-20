@@ -1,3 +1,4 @@
+from email import message
 from re import M
 from time import time
 import requests
@@ -5,6 +6,7 @@ import json
 import datetime
 import os
 import sched, time
+import logging
 
 from openpyxl import Workbook, load_workbook
 from openpyxl.utils import get_column_letter
@@ -39,6 +41,8 @@ sheet = service.spreadsheets()
 
 #Ende
 
+#Log
+logging.basicConfig(filename="logCraw.log", level=logging.INFO, format='%(asctime)s - %(message)s')
 
 datum = (datetime.now() - timedelta(1))
 datum_weekday = datum.weekday()
@@ -58,7 +62,7 @@ headers = {
     "User-Agent": "Mozilla/5.0"
 }
 
-
+logging.info("START craw.py")
 s = sched.scheduler(time.time, time.sleep)
 
 def printProgressBar(progress):
@@ -73,6 +77,8 @@ def printProgressBar(progress):
     print("]")
     
 def main(sc):
+
+    logging.info("Start Process CRAW")
 
     wb = load_workbook('Daten.xlsx') 
 
@@ -186,6 +192,7 @@ def main(sc):
                 try: #TheIce
                     response_Ice = requests.get(url_ice, params=params_ice, headers=headers)
                 except requests.exceptions.RequestException as e1:
+                    logging.exception("Exception occured - Connect to TheICE")
                     raise SystemExit(e1)
 
                 response_Ice.raise_for_status()
@@ -207,8 +214,10 @@ def main(sc):
                 try: #CME-Group
                     response = requests.get(url, params=params, headers=headers) #URL
                 except requests.exceptions.Timeout:
+                    logging.exception("Exception occured (timeout) - Connect to CME")
                     print("time-out")
                 except requests.exceptions.ConnectionError:
+                    logging.exception("Exception occured (conn err) - Connect to CME")
                     print('Connection Error')
                 
 
@@ -279,7 +288,7 @@ def main(sc):
                 request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID, 
                                     range=rangeS ,valueInputOption="USER_ENTERED", body={"values": aoa}).execute()
             except: 
-                print("Connection error - could not be pushed to sheet")
+                logging.exception("Connection error - could not be pushed to sheet")
             
             #Abstand zwischen neuen Datensätzen:
 
@@ -301,8 +310,9 @@ def main(sc):
     ██║░░░░░██║██║░╚███║██║██████╔╝██║░░██║██╗
     ╚═╝░░░░░╚═╝╚═╝░░╚══╝╚═╝╚═════╝░╚═╝░░╚═╝╚═╝
     """)
-
+    logging.info("Finished Process CRAW")
     s.enter(60, 1, main, (sc,))
+    
 
 s.enter(60, 1, main, (s,))
 s.run()
