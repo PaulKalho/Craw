@@ -18,7 +18,6 @@ from datetime import date, datetime, timedelta
 #googleapiclient  pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 
 # GOOGLE AUTH 
-
 import os.path
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
@@ -141,12 +140,11 @@ def main(sc):
 
     inc = 4
     ch = 'B'
-
+    #For Schleife -> Gehe durch Datensätze (in Data ordner)
     for b in range (0, 8):
 
-        inc = 4
-        
-
+        inc = 4 
+    
         if b >= 1: 
             cord_col_a = cord_col_a + 3
             cord_col_b = cord_col_b + 3
@@ -161,8 +159,6 @@ def main(sc):
 
         print("Fetching: " + dataName_array[b] + ".json")
 
-        #Momentan preloaded: Man könnte auch je eintrag in for l schleife prozentzahl addieren!
-
         printProgressBar(progress)
 
         print("Progress: " + str(progress) + "%\n")
@@ -171,11 +167,9 @@ def main(sc):
 
         for l in range(0 , len(info_data["infoData"])):
 
-            rangeS = "Kontraktvolumen!" + str(ch) + str(inc) #Name der Tabelle! 
-            
+            rangeS = "Kontraktvolumen!" + str(ch) + str(inc) #Name der Tabelle auf GoogleSheets! 
             
             progress = round(progress + (12.5/len(info_data["infoData"])), 2)
-
 
             if(info_data["infoData"][l]["from"] == "theice"): #Ist TheIce url?
                 
@@ -237,8 +231,6 @@ def main(sc):
             i = 0 #für schleife monate reset
             aoa = [[name], ["MONAT", "TOTAL"]]
         
-            
-
             cord_b = cord_b + 1
 
             while i < 3:
@@ -257,9 +249,6 @@ def main(sc):
                     aoa.append(arrayMonat)
 
                     
-                    
-            
-
                 if(isCme == False):
 
                     if i == len(data_ice): #Bug fix "Out of Range z.190"
@@ -277,13 +266,11 @@ def main(sc):
 
                 i = i + 1 #Increment
             
-
-
                 cord_b = cord_b + 1
 
             inc = inc + 6
 
-            #Write aoa to sheet
+            #Write aoa to GoogleSheet
             try:
                 request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID, 
                                     range=rangeS ,valueInputOption="USER_ENTERED", body={"values": aoa}).execute()
@@ -291,15 +278,12 @@ def main(sc):
                 logging.exception("Connection error - could not be pushed to sheet")
             
             #Abstand zwischen neuen Datensätzen:
-
             cord_b = cord_b + 2
             cord_a = cord_a + 6
 
-            
-        
             i = 0 #reset für nächsten durchlauf
 
-        ch = chr(ord(ch) + 3)
+        ch = chr(ord(ch) + 3) #Increment in GoogleSheet(-> Jeder Datensatz soll nebeneinander stehen B wird zu B+3=E)
         wb.save("Daten.xlsx")
 
     print(""" \n 
@@ -313,9 +297,9 @@ def main(sc):
     logging.info("Finished Process CRAW")
     s.enter(60, 1, main, (sc,))
     
-
+##RUN EACH 60 SEC ###############
 s.enter(60, 1, main, (s,))
 s.run()
+#################################
 
-#Log Datei
 #Notifiyer wenn Crash
