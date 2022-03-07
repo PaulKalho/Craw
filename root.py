@@ -55,6 +55,7 @@ elif(datum_weekday == 5):
 elif(datum_weekday == 6):
     tradeDate = (datum - timedelta(2)).strftime('%Y%m%d')
 
+
 #Get trade Date from Website
 
 headers = {
@@ -67,6 +68,34 @@ logging.info("START craw.py")
 s = sched.scheduler(time.time, time.sleep)
 
 
+def checkTradeDate(tradeDate_data, tradeDate, url_id, params):
+
+    #While Array Len == 0 -> tradeDate nicht richtig
+    #Wihile Array Len > 0 -> tradeDate richtig
+
+    while(len(tradeDate_data["monthData"]) == 0):
+        tradeDateInt = int(tradeDate) - 1
+        tradeDate = str(tradeDateInt)
+        
+        newUrl = "https://www.cmegroup.com/CmeWS/mvc/Volume/Details/F/"+ url_id +"/"+ tradeDate + "/P"
+        try: #CME-Group
+            response = requests.get(newUrl, params=params, headers=headers) #URL
+        except requests.exceptions.Timeout:
+            logging.exception("Exception occured (timeout) - Connect to CME")
+            print("time-out")
+        except requests.exceptions.ConnectionError:
+            logging.exception("Exception occured (conn err) - Connect to CME")
+            print('Connection Error')
+                
+
+        response.raise_for_status()
+
+        tradeDate_data = response.json() #Data von Url Json
+
+    
+        
+    return tradeDate_data
+    
 def printProgressBar(progress):
 
     print("[", end="")
@@ -231,7 +260,9 @@ def main(sc):
 
                 response.raise_for_status()
 
-                data_Cme = response.json() #Data von Url Json
+                data_Cme_NC = response.json() #Data von Url Json
+
+                data_Cme = checkTradeDate(data_Cme_NC, tradeDate, url_id, params)
 
                 isCme = True
 
