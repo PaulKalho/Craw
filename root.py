@@ -12,6 +12,7 @@ from googleapiclient.discovery import build
 from google.oauth2 import service_account
 
 ##Dependencies##
+
 #requests
 #openpyxl #Für excel
 #googleapiclient  pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
@@ -214,6 +215,7 @@ def main(sc):
 
             if(info_data["infoData"][l]["from"] == "cme"): #Ist cme url?
 
+                
                 params = {
                     "tradeDate": tradeDate, #wie verändert sich das trade datum?
                     "pageSize": "50",
