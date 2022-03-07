@@ -105,3 +105,38 @@ googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.
 2022-02-23 09:52:16,654 - Finished Process CRAW
 2022-02-23 09:53:16,667 - Start Process CRAW
 2022-02-23 09:54:07,891 - Finished Process CRAW
+2022-02-23 09:55:07,904 - Start Process CRAW
+2022-02-23 09:56:04,224 - Finished Process CRAW
+2022-02-23 09:57:04,230 - Start Process CRAW
+2022-02-23 09:57:51,226 - Finished Process CRAW
+2022-02-23 09:58:51,241 - Start Process CRAW
+2022-02-23 14:20:04,537 - START craw.py
+2022-02-23 14:20:09,551 - Start Process CRAW
+2022-02-23 14:20:22,781 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "c:\Users\kalho\Documents\Programmierung\Craw\root.py", line 277, in main
+    range=rangeS ,valueInputOption="USER_ENTERED", body={"values": aoa}).execute()
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 400 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21B60?valueInputOption=USER_ENTERED&alt=json returned "Range (Kontraktvolumen!B60) exceeds grid limits. Max rows: 58, max columns: 25". Details: "Range (Kontraktvolumen!B60) exceeds grid limits. Max rows: 58, max columns: 25">
+2022-02-23 14:20:24,412 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "c:\Users\kalho\Documents\Programmierung\Craw\root.py", line 277, in main
+    range=rangeS ,valueInputOption="USER_ENTERED", body={"values": aoa}).execute()
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 400 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21B68?valueInputOption=USER_ENTERED&alt=json returned "Range (Kontraktvolumen!B68) exceeds grid limits. Max rows: 58, max columns: 25". Details: "Range (Kontraktvolumen!B68) exceeds grid limits. Max rows: 58, max columns: 25">
+2022-02-23 14:21:13,157 - Finished Process CRAW
+2022-02-24 23:06:03,688 - START craw.py
+2022-02-24 23:06:08,727 - Start Process CRAW
+2022-02-24 23:06:43,914 - Finished Process CRAW
+2022-02-24 23:16:11,822 - START craw.py
+2022-02-24 23:16:16,823 - Start Process CRAW
+2022-02-24 23:16:52,388 - Finished Process CRAW
+2022-02-24 23:19:21,779 - START craw.py
+2022-02-24 23:19:26,786 - Start Process CRAW
+2022-02-24 23:19:59,954 - Finished Process CRAW
