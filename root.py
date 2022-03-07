@@ -1,22 +1,63 @@
+from cgitb import text
 from email import message
 from re import M
 from time import time
+from xml.dom.minidom import Document
 import requests
 import json
 import datetime
 import sched, time
 import logging
+
+import telegram
+import constants as keys
+import responses as R
+
 from datetime import date, datetime, timedelta
 #Google Auth for Sheets API:
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
+from telegram.ext import * 
 
 ##Dependencies##
-
+#telegram-bot
 #requests
 #openpyxl #Für excel
 #googleapiclient  pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 
+
+def send_file(file, chat_id):
+    bot = telegram.Bot(keys.API_KEY)
+
+    with open(file, 'r') as f:
+        bot.send_document(chat_id = chat_id, document = f )
+
+# Telegram Bot #
+
+def start_command(update, context):
+    update.message.reply_text("Willkommen beim Craw-Bot")
+
+def help_command(update, context):
+    update.message.reply_text("Gibt noch nicht genug Funktionaliät")
+
+def log_command(update, context):
+    chat_id = update.effective_chat.id
+    send_file('logCraw.log',chat_id)
+
+def hanlde_message(update, context):
+    text = str(update.message.text).lower()
+    response = R.sample_responses(text)
+    update.message.reply_text(response)
+
+def craw_command(update, context):
+    s.enter(5, 1, main, (s,))
+    update.message.reply_text("Gestartet")
+    s.run()
+
+def error(update, context):
+    print(f"Update {update} caused error {context.error}")
+
+######################
 
 # Call the Sheets API #
 
@@ -27,9 +68,13 @@ creds = None
 creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
-SAMPLE_SPREADSHEET_ID = '1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo'
-#SAMPLE_SPREADSHEET_ID = '177LVKVaM5a-7tokmpp8anueSLgyBN2DsYvlVA-1CKM8'
+# Online # 
+#SAMPLE_SPREADSHEET_ID = '1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo'
+##########
 
+# TEST #
+SAMPLE_SPREADSHEET_ID = '177LVKVaM5a-7tokmpp8anueSLgyBN2DsYvlVA-1CKM8'
+########
 service = build('sheets', 'v4', credentials=creds)
 
 sheet = service.spreadsheets()
@@ -156,11 +201,30 @@ def printProgressBar(progress):
     
     print("]")
     
+def botrun():
+    ### Bot ###
+    updater = Updater(keys.API_KEY, use_context=True)
+    dp = updater.dispatcher
+
+    dp.add_handler(CommandHandler("start", start_command))
+    dp.add_handler(CommandHandler("help", help_command))
+    dp.add_handler(CommandHandler("craw", craw_command))
+    dp.add_handler(CommandHandler("log", log_command ))
+
+    dp.add_handler(MessageHandler(Filters.text, hanlde_message))
+
+    dp.add_error_handler(error)
+
+    updater.start_polling(5)
+    ######
+
 def main(sc):
+    #bot = telegram.Bot(keys.API_KEY)
 
     logging.info("Start Process CRAW")
-
+    #bot.send_message(chat_id="2143240853" ,text="Craw gestartet!")
     dataName_array = ["Currencies", "Energies" , "Equities" , "Financials" , "Grains" , "Meats" , "Metals" , "Softs"]
+
     #### Standard Werte###
     b = 0
     progress = 0.0
@@ -286,10 +350,12 @@ def main(sc):
         ch = chr(ord(ch) + 3) #Increment in GoogleSheet(-> Jeder Datensatz soll nebeneinander stehen B wird zu B+3=E)
 
     BeautifulPrintouts("end")
-
+    #bot.send_message(chat_id="2143240853" ,text="Craw beendet!")
     logging.info("Finished Process CRAW")
     s.enter(3600, 1, main, (sc,)) #Run every hour
     
+
+botrun()
 ##Start after 5 SEC ###############
 s.enter(5, 1, main, (s,))
 s.run()
