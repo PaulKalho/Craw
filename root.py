@@ -7,12 +7,14 @@ import datetime
 import os
 import sched, time
 import logging
+import smtplib
 
 from openpyxl import Workbook, load_workbook
 from openpyxl.utils import get_column_letter
 from datetime import date, datetime, timedelta
 
 ##Dependencies##
+
 #requests
 #openpyxl
 #googleapiclient  pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
@@ -64,6 +66,7 @@ headers = {
 logging.info("START craw.py")
 s = sched.scheduler(time.time, time.sleep)
 
+
 def printProgressBar(progress):
 
     print("[", end="")
@@ -74,6 +77,14 @@ def printProgressBar(progress):
 
     
     print("]")
+
+def sendmail():
+    host = "smtp.freesmtpservers.com"
+    server = smtplib.SMTP(host)
+    FROM = "tester@test.de"
+    TO = "kalhornpaul@gmail.com"
+    MSG = "Subject: Test email python\n\nBody of your message!"
+    server.sendmail(FROM, TO, MSG)
     
 def main(sc):
 
@@ -138,6 +149,8 @@ def main(sc):
                                 ::::  :::. .:::                     :::. .:::  :::.           
                                     """ )
 
+    #sendmail()
+
     inc = 4
     ch = 'B'
     #For Schleife -> Gehe durch Datensätze (in Data ordner)
@@ -195,6 +208,7 @@ def main(sc):
 
             if(info_data["infoData"][l]["from"] == "cme"): #Ist cme url?
 
+                
                 params = {
                     "tradeDate": tradeDate, #wie verändert sich das trade datum?
                     "pageSize": "50",
@@ -203,8 +217,8 @@ def main(sc):
 
                 url_id = (info_data["infoData"][l]["url-id"])
 
-                url = "https://www.cmegroup.com/CmeWS/mvc/Volume/Details/F/"+ url_id +"/"+ tradeDate + "/P"
-                #print(url)
+                url = "https://www.cmegroup.com/CmeWS/mvc/Volume/Details/F/"+ url_id +"/" + tradeDate + "/P"
+                print(url)
                 try: #CME-Group
                     response = requests.get(url, params=params, headers=headers) #URL
                 except requests.exceptions.Timeout:
@@ -255,8 +269,9 @@ def main(sc):
                         cord_b = cord_b + 1
                         break
                     
-                    ws[get_column_letter(cord_col_a) + str(cord_b)] = data_ice[i]["marketStrip"]
-                    ws[get_column_letter(cord_col_b) + str(cord_b)] = data_ice[i]["volume"]
+                    #bug: Keine Zeit gefunden, an was liegt es Test: 00:56 Uhr vllt deswegen? -> ws[x] lässt nicht schreiben nur lesen??
+                    #ws[get_column_letter(cord_col_a) + str(cord_b)] = data_ice[i]["marketStrip"] 
+                    #ws[get_column_letter(cord_col_b) + str(cord_b)] = data_ice[i]["volume"]
 
                     month = data_ice[i]["marketStrip"]
                     totalVolume = data_ice[i]["volume"]
@@ -295,11 +310,13 @@ def main(sc):
     ╚═╝░░░░░╚═╝╚═╝░░╚══╝╚═╝╚═════╝░╚═╝░░╚═╝╚═╝
     """)
     logging.info("Finished Process CRAW")
-    s.enter(60, 1, main, (sc,))
+    s.enter(300, 1, main, (sc,)) #Repeat every 5min
     
 ##RUN EACH 60 SEC ###############
-s.enter(60, 1, main, (s,))
+s.enter(5, 1, main, (s,))
 s.run()
 #################################
 
 #Notifiyer wenn Crash
+#Immer aktuellsten Datensatz haben nicht ab 0 Uhr z.B den noch nicht aktuellen
+#Log wird aktuell auf Vserver nicht geschrieben

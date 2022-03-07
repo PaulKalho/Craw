@@ -1,7 +1,130 @@
-2022-02-20 22:16:43,631 - Start Process CRAW
-2022-02-20 22:17:15,348 - Finished Process CRAW
-2022-02-20 22:17:46,226 - START craw.py
-2022-02-20 22:18:46,236 - Start Process CRAW
-2022-02-20 22:19:24,574 - Finished Process CRAW
-2022-02-20 22:20:24,582 - Start Process CRAW
-2022-02-20 22:20:53,797 - Finished Process CRAW
+2022-02-23 01:27:42,704 - Start Process CRAW
+2022-02-23 01:28:12,750 - Finished Process CRAW
+2022-02-23 01:33:12,750 - Start Process CRAW
+2022-02-23 01:33:35,220 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21Q4?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_metric': 'sheets.googleapis.com/write_requests', 'service': 'sheets.googleapis.com', 'quota_limit': 'WriteRequestsPerMinutePerUser', 'consumer': 'projects/350535748971'}}]">
+2022-02-23 01:33:35,650 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21Q10?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_metric': 'sheets.googleapis.com/write_requests', 'service': 'sheets.googleapis.com', 'quota_limit': 'WriteRequestsPerMinutePerUser', 'consumer': 'projects/350535748971'}}]">
+2022-02-23 01:33:36,577 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21Q16?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_metric': 'sheets.googleapis.com/write_requests', 'service': 'sheets.googleapis.com', 'quota_limit': 'WriteRequestsPerMinutePerUser', 'consumer': 'projects/350535748971'}}]">
+2022-02-23 01:33:36,937 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21T4?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'consumer': 'projects/350535748971', 'quota_limit': 'WriteRequestsPerMinutePerUser', 'service': 'sheets.googleapis.com', 'quota_metric': 'sheets.googleapis.com/write_requests'}}]">
+2022-02-23 01:33:37,286 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21T10?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'consumer': 'projects/350535748971', 'quota_limit': 'WriteRequestsPerMinutePerUser', 'service': 'sheets.googleapis.com', 'quota_metric': 'sheets.googleapis.com/write_requests'}}]">
+2022-02-23 01:33:37,630 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21T16?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'consumer': 'projects/350535748971', 'quota_limit': 'WriteRequestsPerMinutePerUser', 'service': 'sheets.googleapis.com', 'quota_metric': 'sheets.googleapis.com/write_requests'}}]">
+2022-02-23 01:33:38,000 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21T22?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'consumer': 'projects/350535748971', 'quota_limit': 'WriteRequestsPerMinutePerUser', 'service': 'sheets.googleapis.com', 'quota_metric': 'sheets.googleapis.com/write_requests'}}]">
+2022-02-23 01:33:38,376 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21T28?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'consumer': 'projects/350535748971', 'quota_limit': 'WriteRequestsPerMinutePerUser', 'service': 'sheets.googleapis.com', 'quota_metric': 'sheets.googleapis.com/write_requests'}}]">
+2022-02-23 01:33:38,794 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21W4?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'consumer': 'projects/350535748971', 'quota_limit': 'WriteRequestsPerMinutePerUser', 'service': 'sheets.googleapis.com', 'quota_metric': 'sheets.googleapis.com/write_requests'}}]">
+2022-02-23 01:33:39,665 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21W10?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_limit': 'WriteRequestsPerMinutePerUser', 'service': 'sheets.googleapis.com', 'consumer': 'projects/350535748971', 'quota_metric': 'sheets.googleapis.com/write_requests'}}]">
+2022-02-23 01:33:40,483 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21W16?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_limit': 'WriteRequestsPerMinutePerUser', 'service': 'sheets.googleapis.com', 'consumer': 'projects/350535748971', 'quota_metric': 'sheets.googleapis.com/write_requests'}}]">
+2022-02-23 01:33:41,308 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21W22?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'quota_limit': 'WriteRequestsPerMinutePerUser', 'service': 'sheets.googleapis.com', 'consumer': 'projects/350535748971', 'quota_metric': 'sheets.googleapis.com/write_requests'}}]">
+2022-02-23 01:33:42,146 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21W28?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'service': 'sheets.googleapis.com', 'quota_limit': 'WriteRequestsPerMinutePerUser', 'quota_metric': 'sheets.googleapis.com/write_requests', 'consumer': 'projects/350535748971'}}]">
+2022-02-23 01:33:42,452 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "k:\Dokumente\Programmierung\Python\WebScraper\Craw\root.py", line 290, in main
+    request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\Paul\AppData\Local\Programs\Python\Python39\lib\site-packages\googleapiclient\http.py", line 937, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://sheets.googleapis.com/v4/spreadsheets/1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo/values/Kontraktvolumen%21W34?valueInputOption=USER_ENTERED&alt=json returned "Quota exceeded for quota metric 'Write requests' and limit 'Write requests per minute per user' of service 'sheets.googleapis.com' for consumer 'project_number:350535748971'.". Details: "[{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'RATE_LIMIT_EXCEEDED', 'domain': 'googleapis.com', 'metadata': {'service': 'sheets.googleapis.com', 'quota_limit': 'WriteRequestsPerMinutePerUser', 'quota_metric': 'sheets.googleapis.com/write_requests', 'consumer': 'projects/350535748971'}}]">
+2022-02-23 01:33:42,464 - Finished Process CRAW
