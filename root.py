@@ -50,9 +50,10 @@ def hanlde_message(update, context):
     update.message.reply_text(response)
 
 def craw_command(update, context):
-    s.enter(5, 1, main, (s,))
+    #s.enter(5, 1, main, (s,))
     update.message.reply_text("Gestartet")
-    s.run()
+    main(s)
+    #s.run()
 
 def error(update, context):
     print(f"Update {update} caused error {context.error}")
