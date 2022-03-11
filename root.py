@@ -52,7 +52,7 @@ def hanlde_message(update, context):
 def craw_command(update, context):
     #s.enter(5, 1, main, (s,))
     update.message.reply_text("Gestartet")
-    main(s)
+    main(s, True)
     #s.run()
 
 def error(update, context):
@@ -219,7 +219,7 @@ def botrun():
     updater.start_polling(5)
     ######
 
-def main(sc):
+def main(sc , param):
     #bot = telegram.Bot(keys.API_KEY)
 
     logging.info("Start Process CRAW")
@@ -353,12 +353,14 @@ def main(sc):
     BeautifulPrintouts("end")
     #bot.send_message(chat_id="2143240853" ,text="Craw beendet!")
     logging.info("Finished Process CRAW")
-    s.enter(3600, 1, main, (sc,)) #Run every hour
+    if(param == False):
+        s.enter(3600, 1, main, (sc,)) #Run every hour
+    
     
 
 botrun()
 ##Start after 5 SEC ###############
-s.enter(5, 1, main, (s,))
+s.enter(5, 1, main, (s,False))
 s.run()
 #################################
 
