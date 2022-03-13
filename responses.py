@@ -9,11 +9,12 @@ def sample_responses(input_text):
     if user_message in ("wer bist du"):
         return "Ich bin der Craw Bot"
 
-    if user_message in ("time", "time?"):
+    if user_message in ("time", "time?", "Uhrzeit" , "Zeit"):
         now = datetime.now()
         date_time = now.strftime('%d/%m/%y , %H:%M:%S')
 
         return str(date_time)
 
 
-    return "Nix verstehe"
+
+    return "Das verstehe ich noch nicht!"

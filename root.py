@@ -35,10 +35,10 @@ def send_file(file, chat_id):
 # Telegram Bot #
 
 def start_command(update, context):
-    update.message.reply_text("Willkommen beim Craw-Bot")
+    update.message.reply_text("Willkommen beim Craw-Bot. Für Hilfe: /help")
 
 def help_command(update, context):
-    update.message.reply_text("Gibt noch nicht genug Funktionaliät")
+    update.message.reply_text("/log : Gibt die Log-Datei zurück. /n /craw : Startet das Script ")
 
 def log_command(update, context):
     chat_id = update.effective_chat.id
@@ -50,10 +50,8 @@ def hanlde_message(update, context):
     update.message.reply_text(response)
 
 def craw_command(update, context):
-    #s.enter(5, 1, main, (s,))
     update.message.reply_text("Gestartet")
     main(s, True)
-    #s.run()
 
 def error(update, context):
     print(f"Update {update} caused error {context.error}")
@@ -219,7 +217,7 @@ def botrun():
     updater.start_polling(5)
     ######
 
-def main(sc , param):
+def main(sc , param = False):
     #bot = telegram.Bot(keys.API_KEY)
 
     logging.info("Start Process CRAW")
