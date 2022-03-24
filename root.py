@@ -9,6 +9,7 @@ import datetime
 import sched, time
 import logging
 
+
 import telegram
 import constants as keys
 import responses as R
@@ -31,6 +32,14 @@ def send_file(file, chat_id):
 
     with open(file, 'r') as f:
         bot.send_document(chat_id = chat_id, document = f )
+        f.close()
+
+
+def delete_logfile(file):
+    with open(file, 'a') as f:
+        f.truncate(0)
+
+
 
 # Telegram Bot #
 
@@ -38,11 +47,16 @@ def start_command(update, context):
     update.message.reply_text("Willkommen beim Craw-Bot. Für Hilfe: /help")
 
 def help_command(update, context):
-    update.message.reply_text("/log : Gibt die Log-Datei zurück. /n /craw : Startet das Script ")
+    update.message.reply_text("/log : Gibt die Log-Datei zurück. \n/craw : Startet das Script \n/clear : Löscht die log-Datei ")
 
 def log_command(update, context):
     chat_id = update.effective_chat.id
     send_file('logCraw.log',chat_id)
+
+def clear_command(update, context):
+    update.message.reply_text('Log Datei gelöscht!')
+    delete_logfile('logCraw.log')
+    
 
 def hanlde_message(update, context):
     text = str(update.message.text).lower()
@@ -209,6 +223,7 @@ def botrun():
     dp.add_handler(CommandHandler("help", help_command))
     dp.add_handler(CommandHandler("craw", craw_command))
     dp.add_handler(CommandHandler("log", log_command ))
+    dp.add_handler(CommandHandler("clear", clear_command ))
 
     dp.add_handler(MessageHandler(Filters.text, hanlde_message))
 
@@ -362,4 +377,8 @@ s.enter(5, 1, main, (s,False))
 s.run()
 #################################
 
-#Notifiyer wenn Crash
+#Notifiyer wenn Crash (only in log rn)
+#BOT
+    #Clear Log
+    #Last run
+    #Next run?
