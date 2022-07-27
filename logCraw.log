@@ -1,2 +1,195 @@
 2022-03-24 01:16:32,146 - Start Process CRAW
 2022-03-24 01:17:20,084 - Finished Process CRAW
+2022-07-27 11:20:34,571 - START craw.py
+2022-07-27 11:20:34,571 - Scheduler started
+2022-07-27 11:20:40,460 - Start Process CRAW
+2022-07-27 11:20:43,134 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-07-27 11:21:22,859 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-07-27 11:21:37,812 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-07-27 11:22:01,161 - Finished Process CRAW
+2022-07-27 11:22:07,409 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-07-27 11:22:40,783 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-07-27 11:23:00,328 - START craw.py
+2022-07-27 11:23:00,328 - Scheduler started
+2022-07-27 11:23:15,107 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-07-27 11:23:15,500 - Start Process CRAW
+2022-07-27 11:24:21,859 - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628F910>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:24:38,017 - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628EA40>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:24:38,017 - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628F370>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:24:38,017 - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628ED10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2022-07-27 11:24:39,024 - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628D5A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:24:39,024 - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628F190>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:24:39,024 - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628EA70>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:24:39,024 - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628F730>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2022-07-27 11:24:40,534 - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628ED70>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:24:40,534 - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628FFA0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:24:40,534 - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628E3E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:24:40,534 - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628F610>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2022-07-27 11:24:42,800 - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628F8B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:24:42,800 - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628F790>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:24:42,800 - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628D840>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:24:42,800 - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC62AD2A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2022-07-27 11:24:53,934 - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connectionpool.HTTPSConnectionPool object at 0x0000026AC628C250>, 'Connect timed out. (connect timeout=5.0)')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:25:03,947 - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC62ADA50>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:25:13,960 - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC62ACEE0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:25:23,981 - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC62AFD90>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+2022-07-27 11:25:45,940 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-07-27 11:26:00,979 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-07-27 11:26:40,614 - Connection error - could not be pushed to sheet
+Traceback (most recent call last):
+  File "c:\Users\kalho\Documents\Programmierung\Craw\root.py", line 397, in main
+    range=rangeS ,valueInputOption="USER_ENTERED", body={"values": aoa}).execute()
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\googleapiclient\_helpers.py", line 131, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\googleapiclient\http.py", line 922, in execute
+    resp, content = _retry_request(
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\googleapiclient\http.py", line 221, in _retry_request
+    raise exception
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\googleapiclient\http.py", line 190, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\google_auth_httplib2.py", line 218, in request
+    response, content = self.http.request(
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\httplib2\__init__.py", line 1701, in request
+    (response, content) = self._request(
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\httplib2\__init__.py", line 1421, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\httplib2\__init__.py", line 1373, in _conn_request
+    response = conn.getresponse()
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1273, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1129, in read
+    return self._sslobj.read(len, buffer)
+TimeoutError: The read operation timed out
+2022-07-27 11:26:49,035 - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connectionpool.HTTPSConnectionPool object at 0x0000026AC628C250>, 'Connect timed out. (connect timeout=5.0)')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:26:58,624 - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connectionpool.HTTPSConnectionPool object at 0x0000026AC628C250>, 'Connect timed out. (connect timeout=5.0)')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:27:04,480 - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connectionpool.HTTPSConnectionPool object at 0x0000026AC628C250>, 'Connect timed out. (connect timeout=5.0)')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:27:20,670 - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC7459210>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+2022-07-27 11:27:24,869 - Exception occured (conn err) - Connect to CME - Main()
+Traceback (most recent call last):
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 416, in connect
+    self.sock = ssl_wrap_socket(
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 512, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1070, in _create
+    self.do_handshake()
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1341, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:997)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.cmegroup.com', port=443): Max retries exceeded with url: /CmeWS/mvc/Volume/Details/F/316/20220726/P?tradeDate=20220726&pageSize=50&_=1620683546888 (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\kalho\Documents\Programmierung\Craw\root.py", line 346, in main
+    response = requests.get(url, params=params, headers=headers) #URL
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='www.cmegroup.com', port=443): Max retries exceeded with url: /CmeWS/mvc/Volume/Details/F/316/20220726/P?tradeDate=20220726&pageSize=50&_=1620683546888 (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2022-07-27 11:27:29,245 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-07-27 11:28:07,647 - Exception occured (timeout) - Connect to CME - Main()
+Traceback (most recent call last):
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] Ein Verbindungsversuch ist fehlgeschlagen, da die Gegenstelle nach einer bestimmten Zeitspanne nicht richtig reagiert hat, oder die hergestellte Verbindung war fehlerhaft, da der verbundene Host nicht reagiert hat
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x0000026AC628ED70>, 'Connection to www.cmegroup.com timed out. (connect timeout=None)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.cmegroup.com', port=443): Max retries exceeded with url: /CmeWS/mvc/Volume/Details/F/438/20220726/P?tradeDate=20220726&pageSize=50&_=1620683546888 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000026AC628ED70>, 'Connection to www.cmegroup.com timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\kalho\Documents\Programmierung\Craw\root.py", line 346, in main
+    response = requests.get(url, params=params, headers=headers) #URL
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\kalho\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.cmegroup.com', port=443): Max retries exceeded with url: /CmeWS/mvc/Volume/Details/F/438/20220726/P?tradeDate=20220726&pageSize=50&_=1620683546888 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000026AC628ED70>, 'Connection to www.cmegroup.com timed out. (connect timeout=None)'))
+2022-07-27 11:28:18,567 - Finished Process CRAW
+2022-07-27 11:28:32,429 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-07-27 11:29:23,422 - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026AC628F940>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getUpdates
+2022-07-27 11:29:27,816 - START craw.py
+2022-07-27 11:29:27,816 - Scheduler started
+2022-07-27 11:29:38,991 - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000029AE17DC340>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getMe
+2022-07-27 11:29:50,150 - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000029AE17DC460>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getMe
+2022-07-27 11:30:01,300 - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000029AE17DC5B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getMe
+2022-07-27 11:30:41,380 - START craw.py
+2022-07-27 11:30:41,380 - Scheduler started
+2022-07-27 11:30:52,694 - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x000002DB822AFEB0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getMe
+2022-07-27 11:31:03,976 - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x000002DB8241C040>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getMe
+2022-07-27 11:31:21,264 - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x000002DB8241C160>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getMe
+2022-07-27 11:35:34,139 - START craw.py
+2022-07-27 11:35:34,147 - Scheduler started
+2022-07-27 22:40:37,312 - START craw.py
+2022-07-27 22:40:37,312 - Scheduler started
+2022-07-27 22:40:42,621 - Start Process CRAW
+2022-07-27 22:41:18,055 - Finished Process CRAW

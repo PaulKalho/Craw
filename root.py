@@ -85,11 +85,11 @@ creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
 # Online # 
-#SAMPLE_SPREADSHEET_ID = keys.SAMPLE_SPREADSHEET_ID
+SAMPLE_SPREADSHEET_ID = keys.SAMPLE_SPREADSHEET_ID
 ##########
 
 # TEST #
-SAMPLE_SPREADSHEET_ID = keys.SAMPLE_SPREADSHEET_ID_TEST
+#SAMPLE_SPREADSHEET_ID = keys.SAMPLE_SPREADSHEET_ID_TEST
 ########
 service = build('sheets', 'v4', credentials=creds)
 
@@ -333,7 +333,7 @@ def main(sc , param = False):
                 #####################
 
                 params = {
-                    "tradeDate": tradeDate, #wie verändert sich das trade datum?
+                    "tradeDate": tradeDate, 
                     "pageSize": "50",
                     "_": "1620683546888"
                 }
