@@ -3,7 +3,6 @@ from email import message
 from email.policy import HTTP
 from re import M
 from time import time
-from tkinter import W
 from urllib.error import HTTPError
 from xml.dom.minidom import Document
 import requests
