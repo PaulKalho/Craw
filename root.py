@@ -85,11 +85,11 @@ creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
 # Online # 
-#SAMPLE_SPREADSHEET_ID = '1E5-AezYFSapijKRCwsLUfD16qsq2HTh3f3s-pgGFzNo'
+#SAMPLE_SPREADSHEET_ID = keys.SAMPLE_SPREADSHEET_ID
 ##########
 
 # TEST #
-SAMPLE_SPREADSHEET_ID = '177LVKVaM5a-7tokmpp8anueSLgyBN2DsYvlVA-1CKM8'
+SAMPLE_SPREADSHEET_ID = keys.SAMPLE_SPREADSHEET_ID_TEST
 ########
 service = build('sheets', 'v4', credentials=creds)
 
