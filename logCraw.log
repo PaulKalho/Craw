@@ -193,3 +193,28 @@ requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.cmegroup.com',
 2022-07-27 22:40:37,312 - Scheduler started
 2022-07-27 22:40:42,621 - Start Process CRAW
 2022-07-27 22:41:18,055 - Finished Process CRAW
+2022-08-22 00:04:55,414 - START craw.py
+2022-08-22 00:04:55,415 - Scheduler started
+2022-08-22 00:05:00,784 - Start Process CRAW
+2022-08-22 00:05:03,347 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-08-22 00:05:40,426 - Finished Process CRAW
+2022-08-22 00:05:42,905 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-08-22 00:17:44,806 - START craw.py
+2022-08-22 00:17:44,807 - Scheduler started
+2022-08-22 00:17:51,151 - Start Process CRAW
+2022-08-22 00:18:31,024 - Finished Process CRAW
+2022-08-22 00:19:08,980 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-08-23 12:13:48,601 - START craw.py
+2022-08-23 12:13:48,602 - Scheduler started
+2022-08-23 12:13:52,927 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-08-23 12:13:54,256 - Start Process CRAW
+2022-08-23 12:14:08,086 - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2022-08-23 12:15:07,321 - START craw.py
+2022-08-23 12:15:07,322 - Scheduler started
+2022-08-23 12:15:12,893 - Start Process CRAW
+2022-08-23 12:41:09,285 - START craw.py
+2022-08-23 12:41:09,287 - Scheduler started
+2022-08-23 12:41:18,768 - START craw.py
+2022-08-23 12:41:18,769 - Scheduler started
+2022-08-23 12:41:24,402 - Start Process CRAW
+2022-08-23 12:42:20,015 - Finished Process CRAW

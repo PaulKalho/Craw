@@ -87,6 +87,7 @@ creds = service_account.Credentials.from_service_account_file(
 SAMPLE_SPREADSHEET_ID = keys.SAMPLE_SPREADSHEET_ID
 ##########
 
+
 # TEST #
 #SAMPLE_SPREADSHEET_ID = keys.SAMPLE_SPREADSHEET_ID_TEST
 ########
@@ -274,6 +275,7 @@ def main(sc , param = False):
 
         inc = 4 #Excel
 
+
         with open("data/" + dataName_array[b] + ".json") as f:
             info_data = json.load(f)
 
@@ -288,6 +290,11 @@ def main(sc , param = False):
             #####
             # Traversing through infoData from .json Datasets
             #####
+
+            # Retrys #
+            # Reset every new Dataset # 
+            retries = 1
+            success = False
 
             rangeS = "Kontraktvolumen!" + str(ch) + str(inc) #Name der Tabelle auf GoogleSheets! 
             
@@ -308,21 +315,32 @@ def main(sc , param = False):
                 }   
 
                 url_ice = "https://www.theice.com/marketdata/DelayedMarkets.shtml?"
+                while not success:
+                    try: #TheIce
+                        response_Ice = requests.get(url_ice, params=params_ice, headers=headers)
+                        response_Ice.raise_for_status()
+                        data_ice = response_Ice.json() #Data von Url Json
+                        success = True
+                    except requests.exceptions.Timeout:
+                        print("timeOut - TheICE - Main()")
+                        wait = retries*30
+                        logging.exception("Exception occured - Timeout - ICE - Main() - Retrying: " + retries + "Seconds " + wait)
+                        time.sleep(wait)
+                        retries += 1 
+                    except requests.exceptions.ConnectionError:
+                        print("ConnErr - TheIce - Main()")
+                        wait = retries*30
+                        logging.exception("Exception occured (conn err) - Connect to TheICE - Main() - Retrying: " + retries + "Seconds " + wait)
+                        time.sleep(wait)
+                        retries += 1 
+                    except requests.exceptions.HTTPError:
+                        print("BadGateway - TheICE - Main()")
+                        wait = retries*30
+                        logging.exception("Exception occured (Bad Gateway) - Test? - TheICE - Main() - Retrying:" + retries + "Seconds" + wait)
+                        time.sleep(wait)
+                        retries += 1 
 
-                try: #TheIce
-                    response_Ice = requests.get(url_ice, params=params_ice, headers=headers)
-                    response_Ice.raise_for_status()
-                except requests.exceptions.Timeout:
-                    logging.exception("Exception occured - Timeout - ICE - Main()")
-                    print("timeOut - TheICE - Main()")
-                except requests.exceptions.ConnectionError:
-                    logging.exception("Exception occured (conn err) - Connect to TheICE - Main()")
-                    print("ConnErr - TheIce - Main()")
-                except requests.exceptions.HTTPError:
-                    logging.exception("Exception occured (Bad Gateway) - Test? - TheICE - Main()")
-                    print("BadGateway - TheICE - Main()")
 
-                data_ice = response_Ice.json() #Data von Url Json
 
             if(info_data["infoData"][l]["from"] == "cme"): 
                 #####################
@@ -341,22 +359,34 @@ def main(sc , param = False):
 
                 url = "https://www.cmegroup.com/CmeWS/mvc/Volume/Details/F/"+ url_id +"/" + tradeDate + "/P"
                 print(url)
-                try: #CME-Group
-                    response = requests.get(url, params=params, headers=headers) #URL
-                    response.raise_for_status()
-                except requests.exceptions.Timeout:
-                    logging.exception("Exception occured (timeout) - Connect to CME - Main()")
-                    print("time-out")
-                except requests.exceptions.ConnectionError:
-                    logging.exception("Exception occured (conn err) - Connect to CME - Main()")
-                    print('Connection Error')
-                except requests.exceptions.HTTPError:
-                    logging.exception("Exception occured (Bad Gateway) - Test? - CME - Main()")
-                    print("BadGateway - CME - Main()")
-                
-                data_Cme_NC = response.json() #Data von Url Json
 
-                data_Cme = checkTradeDate(data_Cme_NC, tradeDate, url_id, params)
+                while not success:
+                    try: #CME-Group
+                        response = requests.get(url, params=params, headers=headers) #URL
+                        response.raise_for_status()
+                        data_Cme_NC = response.json() #Data von Url Json
+                        data_Cme = checkTradeDate(data_Cme_NC, tradeDate, url_id, params)
+                        success = True
+                    except requests.exceptions.Timeout:
+                        wait = retries * 30
+                        logging.exception("Exception occured (timeout) - Connect to CME - Main() - Retries: " + retries + "Wait: " + wait )
+                        time.sleep(wait)
+                        retries += 1
+                        print("time-out")
+                    except requests.exceptions.ConnectionError:
+                        wait = retries * 30
+                        logging.exception("Exception occured (conn err) - Connect to CME - Main() - Retries: " + retries + "Wait: " + wait)
+                        time.sleep(wait)
+                        retries += 1 
+                        print('Connection Error')
+                    except requests.exceptions.HTTPError:
+                        wait = retries * 30
+                        logging.exception("Exception occured (Bad Gateway) - Test? - CME - Main() - Retries: " + retries + "Wait: " + wait)
+                        time.sleep(wait)
+                        retries += 1
+                        print("BadGateway - CME - Main()")
+                
+
 
                 isCme = True
 
