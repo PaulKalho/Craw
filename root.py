@@ -324,19 +324,19 @@ def main(sc , param = False):
                     except requests.exceptions.Timeout:
                         print("timeOut - TheICE - Main()")
                         wait = retries*30
-                        logging.exception("Exception occured - Timeout - ICE - Main() - Retrying: " + retries + "Seconds " + wait)
+                        logging.exception("Exception occured - Timeout - ICE - Main() - Retrying: " + str(retries) + "Seconds " + str(wait))
                         time.sleep(wait)
                         retries += 1 
                     except requests.exceptions.ConnectionError:
                         print("ConnErr - TheIce - Main()")
                         wait = retries*30
-                        logging.exception("Exception occured (conn err) - Connect to TheICE - Main() - Retrying: " + retries + "Seconds " + wait)
+                        logging.exception("Exception occured (conn err) - Connect to TheICE - Main() - Retrying: " + str(retries) + "Seconds " + str(wait))
                         time.sleep(wait)
                         retries += 1 
                     except requests.exceptions.HTTPError:
                         print("BadGateway - TheICE - Main()")
                         wait = retries*30
-                        logging.exception("Exception occured (Bad Gateway) - Test? - TheICE - Main() - Retrying:" + retries + "Seconds" + wait)
+                        logging.exception("Exception occured (Bad Gateway) - Test? - TheICE - Main() - Retrying:" + str(retries) + "Seconds" + str(wait))
                         time.sleep(wait)
                         retries += 1 
 
@@ -369,19 +369,19 @@ def main(sc , param = False):
                         success = True
                     except requests.exceptions.Timeout:
                         wait = retries * 30
-                        logging.exception("Exception occured (timeout) - Connect to CME - Main() - Retries: " + retries + "Wait: " + wait )
+                        logging.exception("Exception occured (timeout) - Connect to CME - Main() - Retries: " + str(retries) + "Wait: " + str(wait) )
                         time.sleep(wait)
                         retries += 1
                         print("time-out")
                     except requests.exceptions.ConnectionError:
                         wait = retries * 30
-                        logging.exception("Exception occured (conn err) - Connect to CME - Main() - Retries: " + retries + "Wait: " + wait)
+                        logging.exception("Exception occured (conn err) - Connect to CME - Main() - Retries: " + str(retries) + "Wait: " + str(wait))
                         time.sleep(wait)
                         retries += 1 
                         print('Connection Error')
                     except requests.exceptions.HTTPError:
                         wait = retries * 30
-                        logging.exception("Exception occured (Bad Gateway) - Test? - CME - Main() - Retries: " + retries + "Wait: " + wait)
+                        logging.exception("Exception occured (Bad Gateway) - Test? - CME - Main() - Retries: " + str(retries) + "Wait: " + (wait))
                         time.sleep(wait)
                         retries += 1
                         print("BadGateway - CME - Main()")
