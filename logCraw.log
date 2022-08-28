@@ -218,3 +218,12 @@ requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.cmegroup.com',
 2022-08-23 12:41:18,769 - Scheduler started
 2022-08-23 12:41:24,402 - Start Process CRAW
 2022-08-23 12:42:20,015 - Finished Process CRAW
+2022-08-24 21:12:43,210 - START craw.py
+2022-08-24 21:12:43,213 - Scheduler started
+2022-08-24 21:12:48,712 - Start Process CRAW
+2022-08-24 21:13:35,080 - Finished Process CRAW
+2022-08-24 21:14:45,775 - START craw.py
+2022-08-24 21:14:45,807 - Scheduler started
+2022-08-24 21:14:45,813 - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x000001584A91BDF0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getMe
+2022-08-24 21:14:45,814 - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x000001584A91BF10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getMe
+2022-08-24 21:14:45,814 - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x000001584AA380A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot5163841705:AAFZC_KwOwfRrvOuzmKFY5Qiwu5TQTg8VCM/getMe
