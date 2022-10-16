@@ -324,21 +324,21 @@ def main(sc , param = False):
                     except requests.exceptions.Timeout:
                         print("timeOut - TheICE - Main()")
                         wait = retries*30
-                        logging.warning("Exception occured - Timeout - ICE - Main() - Retrying: " + str(retries) + "Seconds " + str(wait))
+                        logging.warning("Exception occured - Timeout - ICE - Main() - Retrying: " + str(retries) + " Seconds " + str(wait))
                         # logging.exception("Exception occured - Timeout - ICE - Main() - Retrying: " + str(retries) + "Seconds " + str(wait))
                         time.sleep(wait)
                         retries += 1 
                     except requests.exceptions.ConnectionError:
                         print("ConnErr - TheIce - Main()")
                         wait = retries*30
-                        logging.warning("Exception occured (conn err) - Connect to TheICE - Main() - Retrying: " + str(retries) + "Seconds " + str(wait))
+                        logging.warning("Exception occured (conn err) - Connect to TheICE - Main() - Retrying: " + str(retries) + " Seconds " + str(wait))
                         # logging.exception("Exception occured (conn err) - Connect to TheICE - Main() - Retrying: " + str(retries) + "Seconds " + str(wait))
                         time.sleep(wait)
                         retries += 1 
                     except requests.exceptions.HTTPError:
                         print("BadGateway - TheICE - Main()")
                         wait = retries*30
-                        logging.warning("Exception occured (Bad Gateway) - Test? - TheICE - Main() - Retrying:" + str(retries) + "Seconds" + str(wait))
+                        logging.warning("Exception occured (Bad Gateway) - Test? - TheICE - Main() - Retrying:" + str(retries) + " Seconds" + str(wait))
                         # logging.exception("Exception occured (Bad Gateway) - Test? - TheICE - Main() - Retrying:" + str(retries) + "Seconds" + str(wait))
                         time.sleep(wait)
                         retries += 1 
@@ -372,21 +372,21 @@ def main(sc , param = False):
                         success = True
                     except requests.exceptions.Timeout:
                         wait = retries * 30
-                        logging.warning("Exception occured (timeout) - Connect to CME - Main() - Retries: " + str(retries) + "Wait: " + str(wait) )
+                        logging.warning("Exception occured (timeout) - Connect to CME - Main() - Retries: " + str(retries) + " Wait: " + str(wait) )
                         # logging.exception("Exception occured (timeout) - Connect to CME - Main() - Retries: " + str(retries) + "Wait: " + str(wait) )
                         time.sleep(wait)
                         retries += 1
                         print("time-out")
                     except requests.exceptions.ConnectionError:
                         wait = retries * 30
-                        logging.warning("Exception occured (conn err) - Connect to CME - Main() - Retries: " + str(retries) + "Wait: " + str(wait))
+                        logging.warning("Exception occured (conn err) - Connect to CME - Main() - Retries: " + str(retries) + " Wait: " + str(wait))
                         # logging.exception("Exception occured (conn err) - Connect to CME - Main() - Retries: " + str(retries) + "Wait: " + str(wait))
                         time.sleep(wait)
                         retries += 1 
                         print('Connection Error')
                     except requests.exceptions.HTTPError:
                         wait = retries * 30
-                        logging.warning("Exception occured (Bad Gateway) - Test? - CME - Main() - Retries: " + str(retries) + "Wait: " + (wait))
+                        logging.warning("Exception occured (Bad Gateway) - Test? - CME - Main() - Retries: " + str(retries) + " Wait: " + (wait))
                         # logging.exception("Exception occured (Bad Gateway) - Test? - CME - Main() - Retries: " + str(retries) + "Wait: " + (wait))
                         time.sleep(wait)
                         retries += 1
@@ -427,6 +427,7 @@ def main(sc , param = False):
             inc = inc + 8
 
             #Write aoa to GoogleSheet
+            # Hier noch ein retry block rein?
             try:
                 request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID, 
                                     range=rangeS ,valueInputOption="USER_ENTERED", body={"values": aoa}).execute()
